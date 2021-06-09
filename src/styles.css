@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(https://allfont.es/allfont.css?fonts=zx-spectrum);
+* {
+    box-sizing: border-box;
+}
+
+img.logo {
+    height: 34px;
+}
+
+body {
+    font-family: 'ZX Spectrum', arial;
+    text-align: left;
+    background-color: #C0C0C0;
+    margin: 0 !important;
+    padding: 0 !important;
+    /* overflow: hidden; */
+}
+
+.footer-texto {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 89px;
+}
+
+table {
+    background-color: #FFFFFF;
+    margin-top: 140px;
+    margin-bottom: 170px;
+    font-size: 15px;
+}
+
+table.table.table-borderless {
+    margin-top: 140px;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-bottom: 20px;
+}
+
+.table td,
+.table th {
+    min-width: 100px;
+}
+
+thead {
+    height: 15px;
+}
+
+thead,
+tbody {
+    border: 2px solid black;
+}
+
+th.not-color:hover {
+    background-color: #FFFFFF;
+}
+
+tr:hover {
+    background-color: #00FFFF !important;
+    /* Add !important to make sure override datables base styles */
+}
