@@ -8,5 +8,5 @@ export class Constants {
     ];
     public static CREDENTIALS = {
         userName: 'admin', password: 'admin'
-    }
+    };
 }
