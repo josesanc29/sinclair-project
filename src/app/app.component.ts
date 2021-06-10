@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Constants } from './constants/sistemas.constants';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'skeleton-angular-electron';
+  emuladores = Constants.SISTEMAS;
+
+  constructor(){}
+
+  // tslint:disable-next-line:typedef
+  selectSystemRetro(rowIndex){
+    // this.emuladores[rowIndex]);
+    console.log(this.emuladores[rowIndex]);
+  }
+
+  // tslint:disable-next-line:typedef
+  openModal(){}
 }

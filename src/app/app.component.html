@@ -11,12 +11,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th class="option-txt">
-                            Amstrad
+                    <tr *ngFor="let system of emuladores; let rowIndex = index" [attr.data-index]="rowIndex">
+                        <th class="option-txt" (click)="selectSystemRetro(rowIndex)" (keyup.enter)="selectSystemRetro(item); $event.preventDefault()">
+                            {{system.name}}
                         </th>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <th class="option-txt">
                             Commodore 64
                         </th>
@@ -50,7 +50,7 @@
                         <th>
                             Office
                         </th>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <th class="not-color"></th>
                     </tr>
