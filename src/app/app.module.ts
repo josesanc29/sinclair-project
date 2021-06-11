@@ -1,22 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './app/components/login/login.component';
 import { ModalSistemComponent } from './components/modal-sistem/modal-sistem.component';
-import { SistemasRetroComponent } from './services/sistemas-retro/sistemas-retro.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { APP_ROUTES } from './app.router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     ModalSistemComponent,
-    SistemasRetroComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    APP_ROUTES,
   ],
   providers: [],
   bootstrap: [AppComponent]

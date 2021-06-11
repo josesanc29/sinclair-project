@@ -6,7 +6,4 @@ export class Constants {
         { name: 'COMODORE C64', image: './img/comodore-64.jpg', download: 'http://www.ccs64.com/' },
         { name: 'COMODORE AMIGA', image: './img/amiga.jpg', download: 'http://www.winuae.net/download/' },
     ];
-    public static CREDENTIALS = {
-        userName: 'admin', password: 'admin'
-    };
 }
