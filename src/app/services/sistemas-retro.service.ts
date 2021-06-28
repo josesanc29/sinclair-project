@@ -1,36 +1,29 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Credencials } from '../constants/credentials.constants';
+import { environment } from '../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SistemasRetroService {
-  private username: string;
-  private password: string;
-  login = false;
-  constructor(public http: HttpClient) {
-    this.username = Credencials.CREDENTIALS.userName;
-    this.password = Credencials.CREDENTIALS.password;
-  }
+  localhost = environment.backendUrl;
+  private headers = new HttpHeaders({
+    'Content-Type':  'application/x-www-form-urlencoded',
+    Accept: '*/*',
+  });
+
+  constructor(public http: HttpClient) {}
+
   // tslint:disable-next-line:typedef
-  public authentication(user: string, pass: string){
-    console.log('datos del component ', user, pass);
-    // return this.http.post('', user, pass).pipe(datos =>{
-    //   if ( user === this.username && pass === this.password){
-    //     this.login = true;
-    //     this.estaLogueado(this.login);
-    //     return 'OK';
-    //   } else {
-    //     this.estaLogueado(this.login);
-    //     return 'NO';
-    //   }
-    // });
+  getLogs() {
+    // tslint:disable-next-line:no-shadowed-variable
+    const url = this.localhost + '/logs';
+    return this.http.get(url);
   }
 
   // tslint:disable-next-line:typedef
-  estaLogueado(estado){
-    return estado;
+  escribeMsgTxt( mensaje) {
+    const options = {headers: this.headers};
+    return this.http.post(`${this.localhost}/mensaje`, mensaje, options);
   }
-
 }

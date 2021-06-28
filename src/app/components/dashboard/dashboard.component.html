@@ -1,4 +1,10 @@
 <div class="row align-items-start">
+    <div class="md-form">
+        <input #text type="text" id="form1" class="form-control">
+        <button class="bg-primary" (click)="mandarMsgTxt(text.value)">Grabar Mensaje</button>
+        <label for="form1" class="">Example label</label>
+        <button class="bg-primary" (click)="printLogs()">LOGS</button>
+    </div>
     <div class="col-md-6">
         <table class="table table-borderless table-sm table-responsive">
             <thead class="table-dark">
