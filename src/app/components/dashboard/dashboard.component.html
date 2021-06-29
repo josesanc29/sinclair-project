@@ -1,0 +1,31 @@
+<div class="row align-items-start">
+    <div class="col-md-6">
+        <table class="table table-borderless table-sm table-responsive">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">
+                        <img class="logo" src="../assets/images/logo.png">
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let system of emuladores; let rowIndex = index" [attr.data-index]="rowIndex">
+                    <th class="option-txt" (click)="selectSystemRetro(rowIndex)" (keyup.enter)="selectSystemRetro(item); $event.preventDefault()">
+                        {{system.name}}
+                    </th>
+                </tr>
+                <tr>
+                    <th class="not-color"></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-12">
+        <div class="footer-texto">
+            <span>@1982, 1986, 1987, 2021 Sinclair - Amstrad Plc .</span>
+            <br>
+            <span>A Jose Sanchez Diez application.</span>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 <div class="container">
-    <div class="row align-items-start">
+    <router-outlet></router-outlet>
+    <!-- <div class="row align-items-start">
         <div class="col-md-6">
             <table class="table table-borderless table-sm table-responsive">
                 <thead class="table-dark">
@@ -11,44 +12,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th class="option-txt">
-                            Amstrad
-                        </th>
-                    </tr>
-                    <tr>
-                        <th class="option-txt">
-                            Commodore 64
-                        </th>
-                    </tr>
-                    <tr>
-                        <th class="option-txt">
-                            Commodore Amiga
-                        </th>
-                    </tr>
-                    <tr>
-                        <th class="option-txt">
-                            Msx
-                        </th>
-                    </tr>
-                    <tr>
-                        <th class="option-txt">
-                            Zx Spectrum
-                        </th>
-                    </tr>
-                    <tr>
-                        <th class="option-txt">
-                            Internet
-                        </th>
-                    </tr>
-                    <tr>
-                        <th class="option-txt">
-                            YouTube
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Office
+                    <tr *ngFor="let system of emuladores; let rowIndex = index" [attr.data-index]="rowIndex">
+                        <th class="option-txt" (click)="selectSystemRetro(rowIndex)" (keyup.enter)="selectSystemRetro(item); $event.preventDefault()">
+                            {{system.name}}
                         </th>
                     </tr>
                     <tr>
@@ -64,5 +30,5 @@
                 <span>A Jose Sanchez Diez application.</span>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
